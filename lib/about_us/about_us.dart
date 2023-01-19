@@ -56,21 +56,17 @@ class _AboutUsState extends State<AboutUs> {
                       height: 190),
                   carouselController: tabController,
                   items: links.map((item) {
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 5),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            shape: BoxShape.rectangle,
-                            borderRadius: BorderRadius.circular(15),
-                            border:
-                                Border.all(width: 2, color: Colors.black54)),
-                        width: double.infinity,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: Image.asset(
-                            item,
-                            fit: BoxFit.fill,
-                          ),
+                    return Container(
+                      decoration: BoxDecoration(
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(width: 2, color: Colors.black54)),
+                      width: double.infinity,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(
+                          item,
+                          fit: BoxFit.fill,
                         ),
                       ),
                     );
@@ -80,238 +76,282 @@ class _AboutUsState extends State<AboutUs> {
                   height: 30,
                 ),
                 Container(
-                  alignment: Alignment(-1.0, -1.0),
-                  child: Text(
-                    "About Us :",
-                    style: GoogleFonts.rubik(
-                        textStyle: TextStyle(
-                            fontSize: 20,
-                            color: Colors.blue[800],
-                            fontWeight: FontWeight.bold)),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: Offset(0, 3),
+                      ),
+                    ],
                   ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15,
-                      ),
-                      child: Container(
-                        alignment: Alignment(-1.0, -1.0),
-                        child: Text(
-                          AppStrings.ijTitle,
-                          style: GoogleFonts.rubik(
-                              textStyle: TextStyle(
-                                  fontSize: 15,
-                                  color: Colors.black54,
-                                  fontWeight: FontWeight.bold)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 15, bottom: 15),
+                    child: Column(
+                      children: [
+                        Container(
+                          alignment: Alignment(-1.0, -1.0),
+                          child: Text(
+                            "About Us :",
+                            style: GoogleFonts.rubik(
+                                textStyle: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.blue[800],
+                                    fontWeight: FontWeight.bold)),
+                          ),
                         ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Container(
-                        alignment: Alignment(-1.0, -1.0),
-                        child: Text(
-                          AppStrings.ijHeadTitle,
-                          style: GoogleFonts.rubik(
-                              textStyle: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.grey,
-                                  fontWeight: FontWeight.bold)),
+                        SizedBox(
+                          height: 20,
                         ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15,
-                      ),
-                      child: Container(
-                        alignment: Alignment(-1.0, -1.0),
-                        child: Column(
+                        Column(
                           children: [
-                            Text(
-                              AppStrings.ijBody,
-                              style: GoogleFonts.rubik(
-                                  textStyle: TextStyle(
-                                      fontSize: 11,
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.bold)),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 15,
+                              ),
+                              child: Container(
+                                alignment: Alignment(-1.0, -1.0),
+                                child: Text(
+                                  AppStrings.ijTitle,
+                                  style: GoogleFonts.rubik(
+                                      textStyle: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                              ),
                             ),
-                            SizedBox(
-                              height: 5,
+                            Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Container(
+                                alignment: Alignment(-1.0, -1.0),
+                                child: Text(
+                                  AppStrings.ijHeadTitle,
+                                  style: GoogleFonts.rubik(
+                                      textStyle: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                              ),
                             ),
-                            Text(
-                              AppStrings.ijBody1,
-                              style: GoogleFonts.rubik(
-                                  textStyle: TextStyle(
-                                      fontSize: 11,
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.bold)),
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              AppStrings.ijBody2,
-                              style: GoogleFonts.rubik(
-                                  textStyle: TextStyle(
-                                      fontSize: 11,
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.bold)),
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              AppStrings.ijBody3,
-                              style: GoogleFonts.rubik(
-                                  textStyle: TextStyle(
-                                      fontSize: 11,
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.bold)),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 15,
+                              ),
+                              child: Container(
+                                alignment: Alignment(-1.0, -1.0),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      AppStrings.ijBody,
+                                      style: GoogleFonts.rubik(
+                                          textStyle: TextStyle(
+                                              fontSize: 11,
+                                              color: Colors.grey,
+                                              fontWeight: FontWeight.bold)),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      AppStrings.ijBody1,
+                                      style: GoogleFonts.rubik(
+                                          textStyle: TextStyle(
+                                              fontSize: 11,
+                                              color: Colors.grey,
+                                              fontWeight: FontWeight.bold)),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      AppStrings.ijBody2,
+                                      style: GoogleFonts.rubik(
+                                          textStyle: TextStyle(
+                                              fontSize: 11,
+                                              color: Colors.grey,
+                                              fontWeight: FontWeight.bold)),
+                                    ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      AppStrings.ijBody3,
+                                      style: GoogleFonts.rubik(
+                                          textStyle: TextStyle(
+                                              fontSize: 11,
+                                              color: Colors.grey,
+                                              fontWeight: FontWeight.bold)),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
                           ],
                         ),
-                      ),
+                      ],
                     ),
-                  ],
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  alignment: Alignment(-1.0, -1.0),
-                  child: Text(
-                    "Contact Us :",
-                    style: GoogleFonts.rubik(
-                        textStyle: TextStyle(
-                            fontSize: 20,
-                            color: Colors.blue[800],
-                            fontWeight: FontWeight.bold)),
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15,
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: Offset(0, 3),
                       ),
-                      child: Container(
-                        alignment: Alignment(-1.0, -1.0),
-                        child: Text(
-                          AppStrings.ij1,
-                          style: GoogleFonts.rubik(
-                              textStyle: TextStyle(
-                                  fontSize: 15,
-                                  color: Colors.black54,
-                                  fontWeight: FontWeight.bold)),
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 15, bottom: 15),
+                    child: Column(
+                      children: [
+                        Container(
+                          alignment: Alignment(-1.0, -1.0),
+                          child: Text(
+                            "Contact Us :",
+                            style: GoogleFonts.rubik(
+                                textStyle: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.blue[800],
+                                    fontWeight: FontWeight.bold)),
+                          ),
                         ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15,
-                      ),
-                      child: Container(
-                        alignment: Alignment(-1.0, -1.0),
-                        child: Text(
-                          AppStrings.ij2,
-                          style: GoogleFonts.rubik(
-                              textStyle: TextStyle(
-                                  fontSize: 15,
-                                  color: Colors.black54,
-                                  fontWeight: FontWeight.bold)),
+                        SizedBox(
+                          height: 20,
                         ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15,
-                      ),
-                      child: Container(
-                        alignment: Alignment(-1.0, -1.0),
-                        child: Text(
-                          AppStrings.ij3,
-                          style: GoogleFonts.rubik(
-                              textStyle: TextStyle(
-                                  fontSize: 15,
-                                  color: Colors.black54,
-                                  fontWeight: FontWeight.bold)),
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 15,
+                              ),
+                              child: Container(
+                                alignment: Alignment(-1.0, -1.0),
+                                child: Text(
+                                  AppStrings.ij1,
+                                  style: GoogleFonts.rubik(
+                                      textStyle: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 15,
+                              ),
+                              child: Container(
+                                alignment: Alignment(-1.0, -1.0),
+                                child: Text(
+                                  AppStrings.ij2,
+                                  style: GoogleFonts.rubik(
+                                      textStyle: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 15,
+                              ),
+                              child: Container(
+                                alignment: Alignment(-1.0, -1.0),
+                                child: Text(
+                                  AppStrings.ij3,
+                                  style: GoogleFonts.rubik(
+                                      textStyle: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 15,
+                              ),
+                              child: Container(
+                                alignment: Alignment(-1.0, -1.0),
+                                child: Text(
+                                  AppStrings.ij4,
+                                  style: GoogleFonts.rubik(
+                                      textStyle: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 15,
+                              ),
+                              child: Container(
+                                alignment: Alignment(-1.0, -1.0),
+                                child: Text(
+                                  AppStrings.ij5,
+                                  style: GoogleFonts.rubik(
+                                      textStyle: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 15,
+                              ),
+                              child: Container(
+                                alignment: Alignment(-1.0, -1.0),
+                                child: Text(
+                                  AppStrings.ij6,
+                                  style: GoogleFonts.rubik(
+                                      textStyle: TextStyle(
+                                          fontSize: 15,
+                                          color: Colors.black54,
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
+                      ],
                     ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15,
-                      ),
-                      child: Container(
-                        alignment: Alignment(-1.0, -1.0),
-                        child: Text(
-                          AppStrings.ij4,
-                          style: GoogleFonts.rubik(
-                              textStyle: TextStyle(
-                                  fontSize: 15,
-                                  color: Colors.black54,
-                                  fontWeight: FontWeight.bold)),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15,
-                      ),
-                      child: Container(
-                        alignment: Alignment(-1.0, -1.0),
-                        child: Text(
-                          AppStrings.ij5,
-                          style: GoogleFonts.rubik(
-                              textStyle: TextStyle(
-                                  fontSize: 15,
-                                  color: Colors.black54,
-                                  fontWeight: FontWeight.bold)),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 15,
-                      ),
-                      child: Container(
-                        alignment: Alignment(-1.0, -1.0),
-                        child: Text(
-                          AppStrings.ij6,
-                          style: GoogleFonts.rubik(
-                              textStyle: TextStyle(
-                                  fontSize: 15,
-                                  color: Colors.black54,
-                                  fontWeight: FontWeight.bold)),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                )
               ],
             ),
           ),
