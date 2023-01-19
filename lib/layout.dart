@@ -4,9 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:timelines/timelines.dart';
 
-class MyHomePage extends StatelessWidget {
+import 'core.dart';
+
+class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     DateTime now = DateTime.now();
@@ -189,14 +196,9 @@ class MyHomePage extends StatelessWidget {
                                 ),
                                 node: TimelineNode(
                                   indicator: OutlinedDotIndicator(
-                                    size: 20,
-                                    color: Colors.green,
-                                    child: Icon(
-                                      Icons.circle_rounded,
+                                      size: 20,
                                       color: Colors.green,
-                                      size: 10,
-                                    ),
-                                  ),
+                                      child: Center(child: IjCircle())),
                                   startConnector: SolidLineConnector(
                                     color: Colors.green,
                                   ),
