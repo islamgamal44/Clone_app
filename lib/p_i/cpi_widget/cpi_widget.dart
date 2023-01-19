@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -23,14 +24,32 @@ class CPI extends StatelessWidget {
         radius: 45,
         lineWidth: 4,
         percent: percent,
-        center: Text(
-          centreText,
+        center: DefaultTextStyle(
           style: GoogleFonts.rubik(
               textStyle: TextStyle(
-                  fontSize: 18,
+                  fontSize: 20,
                   color: Colors.grey,
                   fontWeight: FontWeight.bold)),
+          child: AnimatedTextKit(
+            pause: Duration(seconds: 1),
+            animatedTexts: [
+              ScaleAnimatedText(centreText),
+              ScaleAnimatedText(centreText),
+              ScaleAnimatedText(centreText),
+            ],
+            onTap: () {
+              print("");
+            },
+          ),
         ),
+        // center: Text(
+        //   centreText,
+        //   style: GoogleFonts.rubik(
+        //       textStyle: TextStyle(
+        //           fontSize: 18,
+        //           color: Colors.grey,
+        //           fontWeight: FontWeight.bold)),
+        // ),
         footer: Text(
           footerText,
           style: GoogleFonts.rubik(
