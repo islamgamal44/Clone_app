@@ -17,7 +17,7 @@ class _IjCircle extends State<IjCircle> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     animationcontroller =
-        AnimationController(vsync: this, duration: Duration(seconds: 1));
+        AnimationController(vsync: this, duration: Duration(seconds: 2));
 
     animationcontroller.repeat();
 
@@ -42,10 +42,13 @@ class _IjCircle extends State<IjCircle> with SingleTickerProviderStateMixin {
       body: Center(
         child: Container(
           alignment: Alignment.center,
-          height: 10,
+          height: 20,
           child: Container(
-            decoration:
-                BoxDecoration(shape: BoxShape.circle, color: Colors.green),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: Colors.grey, width: 1),
+              color: Colors.green,
+            ),
             height: animation.value,
             width: animation.value,
           ),

@@ -196,16 +196,16 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                                 node: TimelineNode(
                                   indicator: OutlinedDotIndicator(
-                                      size: 20,
-                                      color: Colors.green,
-                                      child: Center(child: IjCircle())),
+                                    size: 20,
+                                    color: Colors.white,
+                                    child: IjCircle(),
+                                  ),
                                   startConnector: SolidLineConnector(
                                     color: Colors.green,
                                   ),
                                   endConnector: SizedBox(
                                     height: 30,
                                     child: SolidLineConnector(
-                                      endIndent: 5,
                                       space: 60,
                                       color: Colors.grey[300],
                                     ),
